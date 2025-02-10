@@ -1,5 +1,6 @@
 /* eslint-disable react/no-unescaped-entities */
 import ify from '../images/ify.png'
+import SplitText from './splitext'
 const Hero = () => {
     return (
       <section className="bg-black text-white h-screen flex items-center justify-center p-10">
@@ -12,7 +13,7 @@ const Hero = () => {
             </h1>
             <p className="text-lg mt-3">A  Virtual Assistant</p>
             <div className="mt-6 space-x-4">
-              <button className="bg-yellow-400 text-black px-6 py-3 rounded-full font-bold">
+              <button className="bg-yellow-400 text-black px-6 py-3 rounded-full font-bold mb-4">
                 Hire Me
               </button>
               <button className="border border-white px-6 py-3 rounded-full font-bold">
