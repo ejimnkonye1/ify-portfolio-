@@ -27,9 +27,11 @@ const Navbar = () => {
                   <NavLink
                     to={`/${item.toLowerCase().replace(" ", "-")}`}
                     className={({ isActive }) =>
-                      `hover:text-yellow-400 ${
-                        isActive ? "text-yellow-400 underline" : ""
-                      }`
+                 `relative after:content-[''] after:absolute after:left-0 after:bottom-0 
+    after:w-full after:h-[2px] after:bg-yellow-400 after:scale-x-0 
+    after:transition-transform after:duration-300 after:ease-in-out 
+    hover:after:scale-x-100 hover:pb-1 ${isActive ? "text-yellow-400 after:scale-x-100" : ""}`
+
                     }
                   >
                     {item}
