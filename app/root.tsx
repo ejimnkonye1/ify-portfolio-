@@ -6,11 +6,12 @@ import {
   ScrollRestoration,
 } from "@remix-run/react";
 import type { LinksFunction } from "@remix-run/node";
-
+import Loader from "~/components/loader"; 
 import "./tailwind.css";
 import Navbar from "./components/navbar";
 import Hero from "./components/hero";
 import About from "./components/about";
+import { useEffect, useState } from "react";
 export const links: LinksFunction = () => [
   { rel: "preconnect", href: "https://fonts.googleapis.com" },
   {
@@ -24,7 +25,12 @@ export const links: LinksFunction = () => [
   },
 ];
 
+
 export function Layout({ children }: { children: React.ReactNode }) {
+  const [loading, setLoading] = useState(true);
+  useEffect(() => {
+    setTimeout(() => setLoading(false), 2000); // Simulating a loading delay
+  }, []);
   return (
     <html lang="en">
       <head>
@@ -37,7 +43,8 @@ export function Layout({ children }: { children: React.ReactNode }) {
         <Navbar />
         <Hero />
         <About />
-        {children}
+        {loading && <Loader />}
+      {!loading && <>{children}</>}
         <ScrollRestoration />
         <Scripts />
       </body>
