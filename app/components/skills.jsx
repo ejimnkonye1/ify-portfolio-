@@ -8,10 +8,10 @@ export default function Skills() {
     ];
   
     return (
-      <section id="skills" className="bg-gray-100 py-16 text-center">
+      <section id="skills" className="bg-[#000080]   py-16 text-center">
         <div className="max-w-5xl mx-auto px-6">
-          <h2 className="text-4xl font-bold text-[#000080]">Skills</h2>
-          <p className="text-lg text-gray-700 mt-4">Here are some of the skills I bring to the table:</p>
+          <h2 className="text-4xl font-bold text-[#98FF98] ">Skills</h2>
+          <p className="text-lg text-gray-400 mt-4">Here are some of the skills I bring to the table</p>
           
           {/* Skills Grid */}
           <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 mt-8">
