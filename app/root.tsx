@@ -11,6 +11,10 @@ import "./tailwind.css";
 import Navbar from "./components/navbar";
 import Hero from "./components/hero";
 import About from "./components/about";
+import Services from "./components/services";
+import Skills from './components/skills'
+import Reviews from './components/review'
+import Contact from './components/contact'
 import { useEffect, useState } from "react";
 export const links: LinksFunction = () => [
   { rel: "preconnect", href: "https://fonts.googleapis.com" },
@@ -43,6 +47,10 @@ export function Layout({ children }: { children: React.ReactNode }) {
         <Navbar />
         <Hero />
         <About />
+        <Services />
+        <Skills/>
+        <Reviews/>
+        <Contact/>
         {loading && <Loader />}
       {!loading && <>{children}</>}
         <ScrollRestoration />
