@@ -2,18 +2,18 @@ import ify from '../images/ify.png'
 
 export default function About() {
     return (
-      <section id='about' className="bg-[#000080] text-white min-h-screen flex items-center justify-center px-6">
-        <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+      <section id='about' className="bg-[#000080] text-white min-h-screen flex items-center justify-center px-6 pt-10">
+        <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 items-center pt-10">
        
           <div className="flex justify-center">
             <img 
               src={ify}
               alt="Ify" 
-              className="w-full max-w-md rounded-lg shadow-lg"
+              className="w-full max-w-md rounded-lg hidden lg:flex"
             />
           </div>
           <div className="text-center md:text-left">
-            <h1 className="text-4xl md:text-5xl font-bold text-[#98FF98]">
+            <h1 className="text-4xl md:text-4xl font-bold text-[#98FF98] ">
               ABOUT ME
             </h1>
             <p className="mt-4 text-lg md:text-xl">
