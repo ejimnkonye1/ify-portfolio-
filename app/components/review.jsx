@@ -5,8 +5,8 @@ export default function Reviews() {
         text: "We're thrilled with the final outcome and are ready to implement it within our team. Thank you for your hard work and dedication; your efforts are truly appreciated.",
       },
       {
-        name: "Sarah L.",
-        text: "The service exceeded our expectations! The attention to detail, efficiency, and professionalism made the entire process seamless. Highly recommended!",
+        name: "Favour.",
+        text: "Your countless calls, sleepless nights, and relentless determination to get the learners on track did not go unnoticed. You brought heart and drive to every effort, showing that success is built on teamwork and perseverance.",
       },
       {
         name: "David K.",

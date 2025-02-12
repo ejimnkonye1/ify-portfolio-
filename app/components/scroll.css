@@ -1,0 +1,24 @@
+ScrollUp.css
+.scroll-up {
+    opacity: 0;
+    transform: translateY(80px); /* Start slightly below */
+    transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out; /* Transition for opacity and transform */
+}
+
+.scroll-up.visible {
+    opacity: 1; /* Fully visible */
+    transform: translateY(0); /* Move to original position */
+}
+/* styles.css */
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.rotate-animation {
+    animation: rotate 2s linear infinite; /* Adjust duration as needed */
+}
