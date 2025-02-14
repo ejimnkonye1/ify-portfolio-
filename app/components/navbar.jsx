@@ -21,7 +21,7 @@ const Navbar = () => {
 
         <nav className="hidden md:flex">
           <ul className="flex space-x-10 lg:space-x-[70px] lg:px-[60px]">
-            {["Home", "About", "Services", "Skills", "Projects", "Review", "Contact"].map((item) => (
+            {["Home", "About", "Services", "Skills", "Review", "Contact"].map((item) => (
               <li key={item}>
                 <Link
                   to={`#${item.toLowerCase()}`}
@@ -41,7 +41,7 @@ const Navbar = () => {
         {isOpen && (
           <nav className="absolute top-16 left-0 w-full bg-[#000080] text-white md:hidden">
             <ul className="flex flex-col items-start space-y-6 py-6 p-5">
-              {["Home", "About", "Services", "Skills", "Projects", "Review", "Contact"].map((item) => (
+              {["Home", "About", "Services", "Skills",  "Review", "Contact"].map((item) => (
                 <li key={item}>
                   <Link
                     to={`#${item.toLowerCase()}`}

@@ -34,7 +34,7 @@ const Contact = () => {
           </p>
   
        
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-12 text-center pt-10 mb-[150px]">
+        <div className="grid grid-cols-2 md:grid-cols-3 gap-8 mb-12 text-center pt-10 mb-[150px]">
             <div className={`scroll-up ${visible ? 'visible' : ''}`}>
                 <div className="w-[100px] h-[100px] mx-auto bg-gray-800 rounded-full flex items-center justify-center">
                     <AiOutlineCalendar className="text-[#98FF98] text-[30px]" />
@@ -75,23 +75,13 @@ const Contact = () => {
                 </div>
                 <h4 className="mt-4 mb-4 font-semibold uppercase text-[17px]">Email</h4>
                 <p className="text-gray-400">
-                    <a href="mailto:Ifebuchejulietobi@gmail.com" className="text-[#98FF98] hover:underline">
+                    <a href="mailto:Ifebuchesolution@gmail.com" className="text-[#98FF98] hover:underline">
                         Email 
                     </a>
                 </p>
             </div>
 
-            <div className={`scroll-up ${visible ? 'visible' : ''}`}>
-                <div className="w-[100px] h-[100px] mx-auto bg-gray-800 rounded-full flex items-center justify-center">
-                    <FiMail className="text-[#98FF98] text-[30 px]" />
-                </div>
-                <h4 className="mt-4 mb-4 font-semibold uppercase text-[17px]">Email</h4>
-                <p className="text-gray-400">
-                    <a href="mailto:Ifebuchejulietobi@gmail.com" className="text-[#98FF98] hover:underline">
-                        info@yoursite.com
-                    </a>
-                </p>
-            </div>
+         
         </div>
   
        
@@ -105,7 +95,7 @@ const Contact = () => {
       <input type="email" placeholder="Your Email" className="w-full p-3 mb-4 rounded bg-gray-200 text-black" />
       <input type="text" placeholder="Subject" className="w-full p-3 mb-4 rounded bg-gray-200 text-black" />
       <textarea placeholder="Message" className="w-full p-3 mb-4 rounded bg-gray-300 text-black h-32"></textarea>
-      <button className="w-full bg-[#336699] py-3 rounded font-semibold  transition duration-200">SEND MESSAGE</button>
+      <button  className="w-full bg-[#336699] py-3 rounded font-semibold  transition duration-200">SEND MESSAGE</button>
     </form>
   </div>
 </div>
