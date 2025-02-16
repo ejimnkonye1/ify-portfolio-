@@ -50,27 +50,27 @@ export default function Services() {
   
     const tools = [
       "Google Workspace & Microsoft Office Suite",
-      "CRM software (HubSpot, Salesforce, Zoho)",
-      "AI automation & workflow tools",
-      "Task & project management tools (Asana, Trello, ClickUp)",
+      "CRM software (HubSpot, Zoho)",
+      "Workflow automation (Google appscript)",
+      "Task & project management tools (Asana, Trello, Notion)",
       "Communication tools (Slack, Zoom, Microsoft Teams)",
     ];
   
     return (
-      <section id="services" className="bg-[#000080]  py-16 text-center">
+      <section id="services" className=" py-16 text-center">
         <div className="max-w-6xl mx-auto px-6">
   
-          <h2 className="text-4xl font-bold text-[#98FF98] ">My Services</h2>
+          <h2 className="text-4xl font-bold  text-white">My Services</h2>
           <p className="text-lg text-gray-400 mt-4">Here’s how I can help you</p>
           
           <div className="grid sm:grid-cols-2 md:grid-cols-2 gap-8 mt-8 pt-10">
             {services.map((service, index) => (
-              <div key={index} className="bg-gray-300 p-6 rounded-lg shadow-md text-left">
-                <h3 className="text-2xl font-semibold text-[#000080] mb-3">{service.icon} {service.category}</h3>
+              <div key={index} className="bg-[#FFFFFF1A] p-6 rounded-lg shadow-md text-left">
+                <h3 className="text-2xl font-semibold text-white mb-3">{service.icon} {service.category}</h3>
                 <ul className="list-none space-y-2 text-neutral-800">
                   {service.items.map((item, idx) => (
                     <li key={idx} className="flex items-center">
-                      <span className="text-green-500 mr-2"><GrStatusGood size='20' /></span> {item}
+                      <span className="text-yellow-400 mr-2"><GrStatusGood size='20' /></span> <span className="text-[#999999]">{item}</span>
                     </li>
                   ))}
                 </ul>
@@ -79,13 +79,13 @@ export default function Services() {
           </div>
   
          
-          <h2 className="text-4xl font-bold text-[#98FF98]  mt-16">Technical & Digital Tools</h2>
+          <h2 className="text-4xl font-bold text-white  mt-16">Technical & Digital Tools</h2>
           <p className="text-lg text-gray-400 mt-4">Some of the tools I use</p>
   
           <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-6 mt-8 pt-10">
             {tools.map((tool, index) => (
-              <div key={index} className="bg-gray-300 p-4 rounded-lg shadow-md text-neutral-800 font-semibold">
-                ✔ {tool}
+              <div key={index} className="bg-[#FFFFFF1A] p-4 rounded-lg shadow-md text-yellow-400 font-semibold">
+               <span className="text-yellow-400"> ✔  </span><span className="text-[#999999]">{tool}</span>
               </div>
             ))}
           </div>

@@ -6,10 +6,10 @@ const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <header className="bg-[#000080] text-white py-4 fixed w-full z-50 p-2 lg:p-10">
+    <header className="bg-black text-white py-4 fixed w-full z-50 p-2 lg:p-10">
       <div className="container mx-auto flex justify-between items-center px-6">
      
-        <h1 className="text-2xl font-bold">IFY</h1>
+        <h1 className="text-2xl font-bold uppercase">Ifebuche</h1>
 
       
         <button
