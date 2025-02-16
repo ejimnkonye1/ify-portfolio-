@@ -1,16 +1,33 @@
 export default function Skills() {
-    const skills = [
-      "Calendar Management", "Inbox Management", "Chat Support", "Scheduling", "Appointment Coordination",
-      "Accurate and Efficient Data Input", "Excellent Written and Verbal Communication", "Gathering and Analyzing Data",
-      "Time Management", "Prioritization", "Project Management", "Multitasking", "Presentation",
-      "Attention to Detail", "Quick Learning", 
-      "Problem-Solving", "Collaboration"
-    ];
+  const skills = [
+    "Calendar & Inbox Management",
+    "Scheduling",
+    "Appointment Coordination",
+    "Chat Support",
+    "Client Communication",
+    "Conflict Resolution",
+    "Agile & Scrum Project Management",
+    "Workflow Optimization",
+    "Time Management",
+    "Data Entry",
+    "Research",
+    "Analysis",
+    "Written & Verbal Communication",
+    "Report & Presentation Preparation",
+    "Quick Learning",
+    "Process Optimization",
+    "Automation",
+    "Attention to Detail",
+    "Problem-Solving",
+    "Collaboration",
+    "Strategic Thinking"
+];
+    
   
     return (
-      <section id="skills" className="bg-[#000080]   py-16 text-center">
+      <section id="skills" className="py-16 text-center">
         <div className="max-w-6xl mx-auto px-6">
-          <h2 className="text-4xl font-bold text-[#98FF98] ">Skills</h2>
+          <h2 className="text-4xl font-bold   text-white">Skills</h2>
           <p className="text-lg text-gray-400 mt-4">Here are some of the skills I bring to the table</p>
           
         

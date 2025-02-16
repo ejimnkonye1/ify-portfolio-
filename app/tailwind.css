@@ -13,3 +13,6 @@
 .fade-in {
   animation: fadeIn 0.5s ease-in forwards; /* Adjust duration and easing as needed */
 }
+body {
+  @apply bg-black; /* Use Tailwind's apply directive to add the background color */
+}
