@@ -6,7 +6,7 @@ export default function Skills() {
     "Chat Support",
     "Client Communication",
     "Conflict Resolution",
-    "Agile & Scrum Project Management",
+    "Analysis",
     "Workflow Optimization",
     "Time Management",
     "Data Entry",
@@ -20,7 +20,9 @@ export default function Skills() {
     "Attention to Detail",
     "Problem-Solving",
     "Collaboration",
-    "Strategic Thinking"
+    "Strategic Thinking",
+    "Team management",
+    "Project management"
 ];
     
   
@@ -33,7 +35,7 @@ export default function Skills() {
         
           <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 mt-8 pt-10">
             {skills.map((skill, index) => (
-              <div key={index} className="bg-white shadow-md rounded-lg px-4 py-3 text-gray-900 font-semibold text-sm sm:text-base">
+              <div key={index} className="bg-[#FFFFFF1A] shadow-md rounded-lg px-4 py-3 text-[#999999] font-semibold text-sm sm:text-base">
                 {skill}
               </div>
             ))}
