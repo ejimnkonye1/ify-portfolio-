@@ -30,7 +30,7 @@ const Contact = () => {
 
     return (
       <section id="contact" className="  text-white py-16 px-6">
-        <div className="container mx-auto text-center max-w-6xl">
+        <div className="container mx-auto text-center max-w-6xl pt-20">
           <h2 className="text-4xl font-bold mb-4 text-white">Contact Me</h2>
           <p className="text-gray-400 mb-8 text-lg">
           Empowering Excellent

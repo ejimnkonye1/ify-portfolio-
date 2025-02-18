@@ -57,8 +57,8 @@ export default function Services() {
     ];
   
     return (
-      <section id="services" className=" py-16 text-center">
-        <div className="max-w-6xl mx-auto px-6">
+      <section id="services" className=" py-16 text-center pt-10">
+        <div className="max-w-6xl mx-auto px-6 pt-20">
   
           <h2 className="text-4xl font-bold  text-white">My Services</h2>
           <p className="text-lg text-gray-400 mt-4">Here’s how I can help you</p>

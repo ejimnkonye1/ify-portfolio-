@@ -16,7 +16,7 @@ export default function Reviews() {
   
     return (
       <section id="review" className="   py-16 text-center">
-        <div className="max-w-6xl mx-auto px-6">
+        <div className="max-w-6xl mx-auto px-6 2 pt-20">
           <h2 className="text-4xl font-bold text-white ">Client Reviews</h2>
           <p className="text-lg text-gray-400 mt-4">See what our clients have to say</p>
   

@@ -13,6 +13,19 @@
 .fade-in {
   animation: fadeIn 0.5s ease-in forwards; /* Adjust duration and easing as needed */
 }
-body {
-  @apply bg-black; /* Use Tailwind's apply directive to add the background color */
+
+@layer base {
+  body {
+    font-family: 'Poppins', sans-serif;
+    @apply bg-black; 
+  }
+}
+
+@layer base {
+  @font-face {
+    font-family: 'Poppins';
+    src: url('/fonts/Poppins-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+  }
 }
