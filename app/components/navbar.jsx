@@ -12,7 +12,7 @@ const Navbar = () => {
   return (
     <header className="bg-black text-white py-4 fixed w-full z-50 p-2 lg:p-10">
       <div className="container mx-auto flex justify-between items-center px-6">
-        <h1 className="text-2xl font-bold uppercase">Ifebuche</h1>
+        <h1 className="text-2xl font-bold uppercase italic">Ifebuche</h1>
 
         <button
           className="md:hidden text-white text-2xl focus:outline-none"

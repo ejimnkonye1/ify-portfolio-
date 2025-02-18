@@ -17,6 +17,7 @@ import Skills from './components/skills'
 import Reviews from './components/review'
 import Contact from './components/contact'
 import { useEffect, useState } from "react";
+
 export const links: LinksFunction = () => [
   { rel: "preconnect", href: "https://fonts.googleapis.com" },
   {
@@ -48,13 +49,15 @@ export function Layout({ children }: { children: React.ReactNode }) {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <Meta />
         <Links />
+        
       </head>
       <body className="font-poppins">
         <Navbar />
         <Hero />
         <div className="pt-20">
-        <Services />
         <About />
+        <Services />
+       
    
         <Skills/>
         <Reviews/>
