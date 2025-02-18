@@ -2,28 +2,32 @@
 import ify from '../images/ify.png'
 import {  FiMail, } from "react-icons/fi";
 import { AiOutlineLinkedin, AiOutlineCalendar } from "react-icons/ai";
-import { useEffect, useState } from 'react';
+import { json } from "@remix-run/node";
+
+import { Form, useActionData } from '@remix-run/react';
+import { useState } from 'react';
+
+
+
+  
 const Contact = () => {
-  const [visible, setVisible] = useState(false);
+  const [status, setStatus] = useState<{ success: boolean; message: string } | null>(null);
 
-    const handleScroll = () => {
-        const scrollY = window.scrollY;
-        const windowHeight = window.innerHeight;
+  const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
+    const formData = new FormData(event.currentTarget);
 
-        // Check if the user has scrolled down enough to show the elements
-        if (scrollY > windowHeight / 2) {
-            setVisible(true);
-        } else {
-            setVisible(false);
-        }
-    };
+    const response = await fetch("/api/contact", {
+      method: "POST",
+      body: formData,
+    });
 
-    useEffect(() => {
-        window.addEventListener('scroll', handleScroll);
-        return () => {
-            window.removeEventListener('scroll', handleScroll);
-        };
-    }, []);
+    const result = await response.json();
+    setStatus(result);
+  };
+
+
+
     return (
       <section id="contact" className="  text-white py-16 px-6">
         <div className="container mx-auto text-center max-w-6xl">
@@ -35,7 +39,7 @@ const Contact = () => {
   
        
         <div className="grid grid-cols-2 md:grid-cols-3 gap-8 mb-12 text-center pt-10 mb-[150px]">
-            <div className={`scroll-up ${visible ? 'visible' : ''}`}>
+            <div className=''>
                 <div className="w-[100px] h-[100px] mx-auto bg-gray-800 rounded-full flex items-center justify-center">
                     <AiOutlineCalendar className="text-yellow-400 text-[30px]" />
                 </div>
@@ -45,14 +49,14 @@ const Contact = () => {
                         href="https://calendly.com/ifebuchejulietobi/15min"
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="text-yellow-300 hover:underline"
+                        className="text-[#999999] hover:underline"
                     >
                         Book a Call
                     </a>
                 </p>
             </div>
 
-            <div className={`scroll-up ${visible ? 'visible' : ''}`}>
+            <div className=''>
                 <div className="w-[100px] h-[100px] mx-auto bg-gray-800 rounded-full flex items-center justify-center">
                     <AiOutlineLinkedin className="text-yellow-400 text-[30px]" />
                 </div>
@@ -62,20 +66,20 @@ const Contact = () => {
                         href="https://linkedin.com/in/ifebuche-juliet-obi"
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="text-yellow-300 hover:underline"
+                        className="text-[#999999] hover:underline"
                     >
                         Connect with me
                     </a>
                 </p>
             </div>
 
-            <div className={`scroll-up ${visible ? 'visible' : ''}`}>
+            <div className=''>
                 <div className="w-[100px] h-[100px] mx-auto bg-gray-800 rounded-full flex items-center justify-center">
                     <FiMail className="text-yellow-400 text-[30px]" />
                 </div>
                 <h4 className="mt-4 mb-4 font-semibold uppercase text-[17px]">Email</h4>
-                <p className="text-gray-400">
-                    <a href="mailto:Ifebuchesolution@gmail.com" className="text-yellow-300 hover:underline">
+                <p className="">
+                    <a href="mailto:Ifebuchesolution@gmail.com" className="text-[#999999] hover:underline">
                         Email 
                     </a>
                 </p>
@@ -85,20 +89,25 @@ const Contact = () => {
         </div>
   
        
-          <div className="md:flex md:items-center md:justify-center lg:h-auto  shadow-lg bg-white z-20 p-0 rounded-lg">
-  <div className="md:w-1/2 bg-[#343a40] rounded-l-lg overflow-hidden ">
-    <img src={ify} alt="Profile" className="w-full rounded-l-lg lg:h-auto  " />
-  </div>
-  <div className="md:w-1/2 p-8  rounded-r-lg">
-    <form>
-      <input type="text" placeholder="Your Name" className="w-full p-3 mb-4 rounded bg-gray-200 text-black" />
-      <input type="email" placeholder="Your Email" className="w-full p-3 mb-4 rounded bg-gray-200 text-black" />
-      <input type="text" placeholder="Subject" className="w-full p-3 mb-4 rounded bg-gray-200 text-black" />
-      <textarea placeholder="Message" className="w-full p-3 mb-4 rounded bg-gray-300 text-black h-32"></textarea>
-      <button  className="w-full bg-yellow-400 py-3 rounded font-semibold  transition duration-200">SEND MESSAGE</button>
-    </form>
-  </div>
-</div>
+        <div className="md:flex md:items-center md:justify-center lg:h-auto shadow-lg bg-white z-20 p-0 rounded-lg">
+          <div className="md:w-1/2 bg-[#343a40] rounded-l-lg overflow-hidden">
+            <img src={ify} alt="Profile" className="w-full rounded-l-lg lg:h-auto" />
+          </div>
+          <div className="md:w-1/2 p-8 rounded-r-lg">
+            <Form method="post" onSubmit={handleSubmit}>
+              <input type="text" name="name" placeholder="Your Name" className="w-full p-3 mb-4 rounded bg-gray-200 text-black" required />
+              <input type="email" name="email" placeholder="Your Email" className="w-full p-3 mb-4 rounded bg-gray-200 text-black" required />
+              <input type="text" name="subject" placeholder="Subject" className="w-full p-3 mb-4 rounded bg-gray-200 text-black" required />
+              <textarea name="message" placeholder="Message" className="w-full p-3 mb-4 rounded bg-gray-300 text-black h-32" required></textarea>
+              <button type="submit" className="w-full bg-yellow-400 py-3 rounded font-semibold transition duration-200">
+                SEND MESSAGE
+              </button>
+            </Form>
+
+            {/* Show status messages */}
+            {status && <p className={status.success ? "text-green-500 mt-4" : "text-red-500 mt-4"}>{status.message}</p>}
+          </div>
+    </div>
         </div>
       </section>
     );

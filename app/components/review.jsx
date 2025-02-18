@@ -22,8 +22,8 @@ export default function Reviews() {
   
           <div className="grid sm:grid-cols-1 md:grid-cols-3 gap-8 mt-8 pt-10">
             {reviews.map((review, index) => (
-              <div key={index} className="bg-white p-6 rounded-lg shadow-md">
-                <p className="text-gray-800 italic">&quot;{review.text}&quot;</p>
+              <div key={index} className="bg-[#FFFFFF1A]  p-6 rounded-lg shadow-md">
+                <p className="text-[#999999] italic">&quot;{review.text}&quot;</p>
                 <h4 className="mt-4 font-semibold text-yellow-400">— {review.name}</h4>
               </div>
             ))}
