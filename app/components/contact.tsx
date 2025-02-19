@@ -1,43 +1,54 @@
-
-import ify from '../images/ify.png'
+import { useState } from "react";
 import {  FiMail, } from "react-icons/fi";
 import { AiOutlineLinkedin, AiOutlineCalendar } from "react-icons/ai";
-import { json } from "@remix-run/node";
-
-import { Form, useActionData } from '@remix-run/react';
-import { useState } from 'react';
-
-
-
-  
-const Contact = () => {
-  const [status, setStatus] = useState<{ success: boolean; message: string } | null>(null);
+import ify from '../images/ify.png'
+export default function Contact() {
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [message, setMessage] = useState<string | null>(null);
+  const [error, setError] = useState<string | null>(null);
 
   const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
+    setIsSubmitting(true);
+    setMessage(null);
+    setError(null);
+
     const formData = new FormData(event.currentTarget);
+    const data = {
+      name: formData.get("name"),
+      email: formData.get("email"),
+      subject: formData.get("subject"),
+      message: formData.get("message"),
+    };
 
-    const response = await fetch("/api/contact", {
-      method: "POST",
-      body: formData,
-    });
+    try {
+      const response = await fetch("https://email-green-chi.vercel.app/api/v1/send", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(data),
+      });
 
-    const result = await response.json();
-    setStatus(result);
+      const result = await response.json();
+      if (response.ok) {
+        setMessage("Email sent successfully!");
+      } else {
+        setError(result.error || "Failed to send email.");
+      }
+    } catch (error) {
+      setError("Failed to send email. Please try again.");
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
+  return (
+    <section id="contact" className="text-white py-16 px-6">
+      <div className="container mx-auto text-center max-w-6xl pt-20">
+        <h2 className="text-4xl font-bold mb-4 text-white">Contact Me</h2>
+        <p className="text-gray-400 mb-8 text-lg">Empowering Excellence</p>
 
-
-    return (
-      <section id="contact" className="  text-white py-16 px-6">
-        <div className="container mx-auto text-center max-w-6xl pt-20">
-          <h2 className="text-4xl font-bold mb-4 text-white">Contact Me</h2>
-          <p className="text-gray-400 mb-8 text-lg">
-          Empowering Excellent
-
-          </p>
-  
-       
         <div className="grid grid-cols-2 md:grid-cols-3 gap-8 mb-12 text-center pt-10 mb-[150px]">
             <div className=''>
                 <div className="w-[100px] h-[100px] mx-auto bg-gray-800 rounded-full flex items-center justify-center">
@@ -89,29 +100,55 @@ const Contact = () => {
         </div>
   
        
+
         <div className="md:flex md:items-center md:justify-center lg:h-auto shadow-lg bg-white z-20 p-0 rounded-lg">
           <div className="md:w-1/2 bg-[#343a40] rounded-l-lg overflow-hidden">
             <img src={ify} alt="Profile" className="w-full rounded-l-lg lg:h-auto" />
           </div>
           <div className="md:w-1/2 p-8 rounded-r-lg">
-            <Form method="post" onSubmit={handleSubmit}>
-              <input type="text" name="name" placeholder="Your Name" className="w-full p-3 mb-4 rounded bg-gray-200 text-black" required />
-              <input type="email" name="email" placeholder="Your Email" className="w-full p-3 mb-4 rounded bg-gray-200 text-black" required />
-              <input type="text" name="subject" placeholder="Subject" className="w-full p-3 mb-4 rounded bg-gray-200 text-black" required />
-              <textarea name="message" placeholder="Message" className="w-full p-3 mb-4 rounded bg-gray-300 text-black h-32" required></textarea>
-              <button type="submit" className="w-full bg-yellow-400 py-3 rounded font-semibold transition duration-200">
-                SEND MESSAGE
+            <form onSubmit={handleSubmit}>
+              <input
+                type="text"
+                name="name"
+                placeholder="Your Name"
+                className="w-full p-3 mb-4 rounded bg-gray-200 text-black"
+                required
+              />
+              <input
+                type="email"
+                name="email"
+                placeholder="Your Email"
+                className="w-full p-3 mb-4 rounded bg-gray-200 text-black"
+                required
+              />
+              <input
+                type="text"
+                name="subject"
+                placeholder="Subject"
+                className="w-full p-3 mb-4 rounded bg-gray-200 text-black"
+                required
+              />
+              <textarea
+                name="message"
+                placeholder="Message"
+                className="w-full p-3 mb-4 rounded bg-gray-300 text-black h-32"
+                required
+              ></textarea>
+              <button
+                type="submit"
+                className="w-full bg-yellow-400 py-3 rounded font-semibold transition duration-200"
+                disabled={isSubmitting}
+              >
+                {isSubmitting ? "Sending..." : "SEND MESSAGE"}
               </button>
-            </Form>
+            </form>
 
             {/* Show status messages */}
-            {status && <p className={status.success ? "text-green-500 mt-4" : "text-red-500 mt-4"}>{status.message}</p>}
+            {message && <p className="text-green-500 mt-4">{message}</p>}
+            {error && <p className="text-red-500 mt-4">{error}</p>}
           </div>
-    </div>
         </div>
-      </section>
-    );
-  };
-  
-  export default Contact;
-  
+      </div>
+    </section>
+  );
+}

@@ -10,7 +10,7 @@ export default function About() {
             <img 
               src={ify1}
               alt="Ify" 
-              className="w-full max-w-md rounded-lg hidden lg:flex "
+              className="w-full max-w-md rounded-lg hidden lg:flex object-cover"
             />
           </div>
           <div className="text-center md:text-left order-1 md:order-2">
