@@ -17,12 +17,12 @@ export default function Reviews() {
     return (
       <section id="review" className="   py-16 text-center">
         <div className="max-w-6xl mx-auto px-6 2 pt-20">
-          <h2 className="text-4xl font-bold text-white ">Client Reviews</h2>
+          <h2 className="text-4xl font-bold text-yellow-400 ">Client Reviews</h2>
           <p className="text-lg text-gray-400 mt-4">See what our clients have to say</p>
   
           <div className="grid sm:grid-cols-1 md:grid-cols-3 gap-8 mt-8 pt-10">
             {reviews.map((review, index) => (
-              <div key={index} className="bg-[#FFFFFF1A]  p-6 rounded-lg shadow-md">
+              <div key={index} className="bg-[#FFFFFF1A]  p-6 rounded-lg shadow-md hover:scale-105 transition-transform duration-300">
                 <p className="text-[#999999] italic">&quot;{review.text}&quot;</p>
                 <h4 className="mt-4 font-semibold text-yellow-400">— {review.name}</h4>
               </div>

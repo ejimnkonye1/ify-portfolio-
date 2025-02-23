@@ -12,7 +12,7 @@ const Navbar = () => {
   return (
     <header className="bg-black text-white py-4 fixed w-full z-50 p-2 lg:p-10">
       <div className="container mx-auto flex justify-between items-center px-6">
-        <h1 className="text-2xl font-bold uppercase italic">Ifebuche</h1>
+        <h1 className="lg:text-2xl text-md font-semibold font-poppins uppercase italic"><span>Ifeb</span><span className="text-yellow-400">uche</span></h1>
 
         <button
           className="md:hidden text-white text-2xl focus:outline-none"
@@ -42,7 +42,7 @@ const Navbar = () => {
         </nav>
 
         {isOpen && (
-          <nav className="absolute top-16 left-0 w-full bg-[#000080] text-white md:hidden">
+          <nav className="absolute top-16 left-0 w-full bg-black text-white md:hidden">
             <ul className="flex flex-col items-start space-y-6 py-6 p-5">
               {sections.map((item) => (
                 <li key={item}>
