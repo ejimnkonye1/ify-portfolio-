@@ -22,9 +22,12 @@ const Hero = () => {
     Hire Me
   </button>
 </a>
-              <button className="border border-white px-6 py-3 rounded-full font-bold">
+ <a href='https://forms.gle/6P25fDWGqyy61hxW7' target='_blank' rel='nonopener noreferrer'>
+ <button className="border border-white px-6 py-3 rounded-full font-bold">
                 My Works
               </button>
+ </a>
+          
             </div>
           </div>
   
