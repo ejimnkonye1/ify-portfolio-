@@ -54,7 +54,8 @@ export function Layout({ children }: { children: React.ReactNode }) {
       <body className="font-poppins">
         <Navbar />
         <Hero />
-        <div className="pt-20">
+        
+        <div >
         <About />
         <Services />
        

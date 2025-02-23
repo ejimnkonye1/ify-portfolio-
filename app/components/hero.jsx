@@ -3,8 +3,8 @@ import ify from '../images/ify.png'
 
 const Hero = () => {
     return (
-      <section id='home' className=" text-white h-screen flex items-center justify-center p-10 pt-16">
-        <div className="container mx-auto flex flex-col md:flex-row items-center px-6 lg:pt-20 pt-[120px] mb-4 md:pt-20">
+      <section id='home' className=" text-white min-h-screen flex items-center justify-center p-10 ">
+        <div className="container mx-auto flex flex-col md:flex-row items-center px-6 lg:pt-0 pt-[20px] mb-4 ">
           
           <div className="text-center md:text-left md:w-1/2">
 
@@ -15,11 +15,13 @@ const Hero = () => {
             I’m <span className="text-yellow-400 "> Ifebuche!</span>
         
             </h1>
-            <p className="text-lg mt-3">Glad to have you here. Take a look around and discover how I can help support your business. </p>
+            <p className="text-md mt-3">Glad to have you here. Take a look around and discover how I can help support your business. </p>
             <div className="lg:mt-6 mt-3 space-x-4">
-              <button className="bg-yellow-400 text-black px-6 py-3 rounded-full font-bold mb-4">
-                Hire Me
-              </button>
+            <a href="#contact">
+  <button className="bg-yellow-400 text-black px-6 py-3 rounded-full font-bold mb-4">
+    Hire Me
+  </button>
+</a>
               <button className="border border-white px-6 py-3 rounded-full font-bold">
                 My Works
               </button>

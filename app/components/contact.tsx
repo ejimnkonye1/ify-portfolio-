@@ -46,15 +46,15 @@ export default function Contact() {
   return (
     <section id="contact" className="text-white py-16 px-6">
       <div className="container mx-auto text-center max-w-6xl pt-20">
-        <h2 className="text-4xl font-bold mb-4 text-white">Contact Me</h2>
+        <h2 className="text-4xl font-bold mb-4 text-yellow-400">Contact Me</h2>
         <p className="text-gray-400 mb-8 text-lg">Empowering Excellence</p>
 
         <div className="grid grid-cols-2 md:grid-cols-3 gap-8 mb-12 text-center pt-10 mb-[150px]">
             <div className=''>
-                <div className="w-[100px] h-[100px] mx-auto bg-gray-800 rounded-full flex items-center justify-center">
+                <div className="w-[100px] h-[100px] mx-auto bg-gray-800 rounded-full flex items-center justify-center hover:scale-105 transition-transform duration-300">
                     <AiOutlineCalendar className="text-yellow-400 text-[30px]" />
                 </div>
-                <h4 className="mt-4 font-semibold uppercase text-[17px] mb-4">Calendly</h4>
+                <h4 className="mt-4 font-semibold uppercase text-[17px] mb-4 hover:scale-90 transition-transform duration-300">Calendly</h4>
                 <p className="text-gray-400">
                     <a
                         href="https://calendly.com/ifebuchejulietobi/15min"
@@ -68,10 +68,10 @@ export default function Contact() {
             </div>
 
             <div className=''>
-                <div className="w-[100px] h-[100px] mx-auto bg-gray-800 rounded-full flex items-center justify-center">
+                <div className="w-[100px] h-[100px] mx-auto bg-gray-800 rounded-full flex items-center justify-center hover:scale-105 transition-transform duration-300">
                     <AiOutlineLinkedin className="text-yellow-400 text-[30px]" />
                 </div>
-                <h4 className="mt-4 font-semibold uppercase text-[17px] mb-4">LinkedIn</h4>
+                <h4 className="mt-4 font-semibold uppercase text-[17px] mb-4 hover:scale-90 transition-transform duration-300">LinkedIn</h4>
                 <p className="text-gray-400">
                     <a
                         href="https://linkedin.com/in/ifebuche-juliet-obi"
@@ -85,10 +85,10 @@ export default function Contact() {
             </div>
 
             <div className=''>
-                <div className="w-[100px] h-[100px] mx-auto bg-gray-800 rounded-full flex items-center justify-center">
+                <div className="w-[100px] h-[100px] mx-auto bg-gray-800 rounded-full flex items-center justify-center hover:scale-105 transition-transform duration-300">
                     <FiMail className="text-yellow-400 text-[30px]" />
                 </div>
-                <h4 className="mt-4 mb-4 font-semibold uppercase text-[17px]">Email</h4>
+                <h4 className="mt-4 mb-4 font-semibold uppercase text-[17px] hover:scale-90 transition-transform duration-300">Email</h4>
                 <p className="">
                     <a href="mailto:Ifebuchesolution@gmail.com" className="text-[#999999] hover:underline">
                         Email 

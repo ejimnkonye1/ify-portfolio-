@@ -1,6 +1,8 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* Fade-In Animation */
 @keyframes fadeIn {
   from {
     opacity: 0;
@@ -11,13 +13,45 @@
 }
 
 .fade-in {
-  animation: fadeIn 0.5s ease-in forwards; /* Adjust duration and easing as needed */
+  animation: fadeIn 0.5s ease-in forwards;
+}
+
+/* Fade-Up Animation */
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-up {
+  animation: fadeUp 0.5s ease-out forwards;
+}
+
+/* Fade-Down Animation */
+@keyframes fadeDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-down {
+  animation: fadeDown 0.5s ease-out forwards;
 }
 
 @layer base {
   body {
     font-family: 'Poppins', sans-serif;
-    @apply bg-black; 
+    @apply bg-black;
   }
 }
 
