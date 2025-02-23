@@ -30,7 +30,7 @@ export default function About() {
           </p>
 
           <div className="flex justify-center md:justify-start gap-4">
-          <a href="https://calendly.com/ifebuchejulietobi/15min" target='_blank' rel="noopener noreferrer">
+          <a href="https://calendly.com/ifebuchesolution/15min" target='_blank' rel="noopener noreferrer">
             <button className="bg-yellow-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-yellow-700 transition-all duration-300 transform hover:scale-105">
               Book a Free Call
             </button>
