@@ -57,7 +57,7 @@ export default function Contact() {
                 <h4 className="mt-4 font-semibold uppercase text-[17px] mb-4 hover:scale-90 transition-transform duration-300">Calendly</h4>
                 <p className="text-gray-400">
                     <a
-                        href="https://calendly.com/ifebuchejulietobi/15min"
+                        href="https://calendly.com/ifebuchesolution/15min"
                         target="_blank"
                         rel="noopener noreferrer"
                         className="text-[#999999] hover:underline"
