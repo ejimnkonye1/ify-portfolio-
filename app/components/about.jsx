@@ -1,5 +1,5 @@
 import 'animate.css';
-import ify1 from '../images/ify8.png';
+import ify1 from '../images/c.svg';
 
 export default function About() {
   return (
@@ -10,7 +10,7 @@ export default function About() {
           <img
             src={ify1}
             alt="Ify"
-            className="w-full max-w-md rounded-lg shadow-2xl object-cover transform  "
+            className="w-full max-w-md bg-transparent object-cover transform  "
           />
         </div>
 
