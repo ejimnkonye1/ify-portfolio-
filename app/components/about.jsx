@@ -10,7 +10,7 @@ export default function About() {
           <img
             src={ify1}
             alt="Ify"
-            className="w-full max-w-md bg-transparent object-cover transform  "
+            className="w-full max-w-md bg-transparent object-cover transform scale-x-[-1]  "
           />
         </div>
 
