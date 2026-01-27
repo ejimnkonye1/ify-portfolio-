@@ -7,7 +7,7 @@ const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
   const location = useLocation();
 
-  const sections = ["Home", "About", "Services", "Skills", "Insights", "Review", "Contact"];
+  const sections = ["Home", "About", "Services", "Skills", "Insights", , "Contact"];
 
   useEffect(() => {
     const handleScroll = () => {
