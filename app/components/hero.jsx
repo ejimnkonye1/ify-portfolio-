@@ -1,44 +1,74 @@
-/* eslint-disable react/no-unescaped-entities */
 import ify from '../images/ify.png'
 
 const Hero = () => {
-    return (
-      <section id='home' className=" text-white min-h-screen flex items-center justify-center p-10 ">
-        <div className="container mx-auto flex flex-col md:flex-row items-center px-6 lg:pt-0 pt-[20px] mb-4 ">
-          
-          <div className="text-center md:text-left md:w-1/2">
+  return (
+    <section id='home' className="text-white min-h-screen flex items-center justify-center px-6 pt-24 pb-16 lg:pt-32">
+      <div className="container mx-auto max-w-6xl">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
 
-          
-            <p className="text-yellow-400 uppercase font-semibold">Hello,</p> 
-         
-            <h1 className="text-5xl font-bold mt-2">
-            I’m <span className="text-yellow-400 "> Ifebuche!</span>
-        
+          {/* Text Content */}
+          <div className="text-center lg:text-left order-2 lg:order-1">
+            <div className="inline-block px-4 py-2 bg-yellow-400/10 rounded-full mb-6">
+              <span className="text-yellow-400 text-sm font-medium tracking-wide">Senior Project Manager & Strategic Consultant</span>
+            </div>
+
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6">
+              Hi, I'm <span className="text-yellow-400">Ifebuche Juliet</span>
             </h1>
-            <p className="text-md mt-3">Glad to have you here. Take a look around and discover how I can help support your business. </p>
-            <div className="lg:mt-6 mt-3 space-x-4">
-            <a href="#contact">
-  <button className="bg-yellow-400 text-black px-6 py-3 rounded-full font-bold mb-4">
-    Hire Me
-  </button>
-</a>
- <a href='https://forms.gle/6P25fDWGqyy61hxW7' target='_blank' rel='nonopener noreferrer'>
- <button className="border border-white px-6 py-3 rounded-full font-bold">
-                My Works
-              </button>
- </a>
-          
+
+            <p className="text-xl md:text-2xl text-gray-300 font-light mb-4">
+              Empowering organizations to achieve seamless execution, measurable growth, and lasting impact.
+            </p>
+
+            <p className="text-gray-400 text-lg mb-8 max-w-xl mx-auto lg:mx-0">
+              I help businesses align strategy, operations, and teams — turning complex challenges into successful outcomes.
+            </p>
+
+            <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+              <a href="https://calendly.com/ifebuchesolution/15min" target="_blank" rel="noopener noreferrer">
+                <button className="w-full sm:w-auto bg-yellow-400 hover:bg-yellow-500 text-black px-8 py-4 rounded-full font-bold transition-all duration-300 transform hover:scale-105 shadow-lg shadow-yellow-400/25">
+                  Book a Call
+                </button>
+              </a>
+              <a href="#services">
+                <button className="w-full sm:w-auto border-2 border-white hover:border-yellow-400 hover:text-yellow-400 px-8 py-4 rounded-full font-bold transition-all duration-300">
+                  Explore My Work
+                </button>
+              </a>
+            </div>
+
+            {/* Stats */}
+            <div className="grid grid-cols-3 gap-6 mt-12 pt-8 border-t border-gray-800">
+              <div className="text-center lg:text-left">
+                <p className="text-3xl font-bold text-yellow-400">4+</p>
+                <p className="text-gray-400 text-sm">Years Experience</p>
+              </div>
+              <div className="text-center lg:text-left">
+                <p className="text-3xl font-bold text-yellow-400">50+</p>
+                <p className="text-gray-400 text-sm">Projects Delivered</p>
+              </div>
+              <div className="text-center lg:text-left">
+                <p className="text-3xl font-bold text-yellow-400">100%</p>
+                <p className="text-gray-400 text-sm">Client Satisfaction</p>
+              </div>
             </div>
           </div>
-  
-          
-          <div className="md:w-1/2 lg:mt-8 md:mt-0">
-            <img src={ify} alt="Ify" className="w-full" />
+
+          {/* Image */}
+          <div className="order-1 lg:order-2 flex justify-center">
+            <div className="relative">
+              <div className="absolute -inset-4 bg-gradient-to-r from-yellow-400/20 to-yellow-600/20 rounded-full blur-2xl"></div>
+              <img
+                src={ify}
+                alt="Ifebuche Juliet"
+                className="relative w-full max-w-md lg:max-w-lg rounded-2xl"
+              />
+            </div>
           </div>
         </div>
-      </section>
-    );
-  };
-  
-  export default Hero;
-  
+      </div>
+    </section>
+  );
+};
+
+export default Hero;

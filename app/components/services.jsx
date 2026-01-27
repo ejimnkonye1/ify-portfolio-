@@ -1,101 +1,100 @@
-
+import { FiTarget, FiBarChart2, FiUsers, FiMic } from "react-icons/fi";
 import { GrStatusGood } from "react-icons/gr";
+
 export default function Services() {
+  const services = [
+    {
+      category: "Project Management & Strategic Execution",
+      icon: FiTarget,
+      description: "Driving projects from vision to completion with precision and impact.",
+      items: [
+        "Lead end-to-end project delivery across industries",
+        "Align teams, processes, and resources for maximum impact",
+        "Agile & Scrum facilitation",
+        "Risk management, budgeting, and performance tracking",
+        "Stakeholder engagement and executive reporting",
+      ],
+    },
+    {
+      category: "Research & Insights",
+      icon: FiBarChart2,
+      description: "Data-driven strategies that inform smarter decisions.",
+      items: [
+        "Market, competitor, and industry research",
+        "Data-driven recommendations for strategy and growth",
+        "Academic and business research design & reporting",
+        "Operational analytics and process optimization",
+      ],
+    },
+    {
+      category: "Customer Experience & Operations Strategy",
+      icon: FiUsers,
+      description: "Creating seamless experiences that drive loyalty and growth.",
+      items: [
+        "Customer journey mapping & experience optimization",
+        "Service design & process improvement",
+        "Client relationship strategy & loyalty programs",
+        "Digital transformation advisory",
+      ],
+    },
+    {
+      category: "Speaking & Leadership Workshops",
+      icon: FiMic,
+      description: "Inspiring teams and leaders to achieve excellence.",
+      items: [
+        "Project leadership and team collaboration",
+        "Strategic decision-making & problem-solving",
+        "Building high-performance teams",
+        "Change management & organizational development",
+      ],
+    },
+  ];
 
-    const services = [
-      {
-        category: "Executive & Administrative Support",
-        icon: "📌",
-        items: [
-          "Calendar & email management",
-          "Meeting scheduling & coordination",
-          "Travel planning & expense tracking",
-          "Document preparation & data entry",
-          "Inbox organization & correspondence handling",
-        ],
-      },
-      {
-        category: "Project Management",
-        icon: "📌",
-        items: [
-          "End-to-end project coordination",
-          "Task & timeline management",
-          "Resource allocation & budgeting",
-          "Team collaboration & workflow optimization",
-          "Performance tracking & reporting",
-        ],
-      },
-      {
-        category: "Customer Support & Communication",
-        icon: "📌",
-        items: [
-          "Responding to customer inquiries professionally",
-          "Handling complaints & issue resolution",
-          "Live chat & email support",
-          "Client relationship management",
-          "CRM data entry & maintenance",
-        ],
-      },
-      {
-        category: "Research & Data Management",
-        icon: "📌",
-        items: [
-          "Market & competitor research",
-          "Data collection & organization",
-          "Report creation & analysis",
-          "Academic research",
-          "Automation & tool optimization",
-        ],
-      },
-    ];
-  
-    const tools = [
-      "Google Workspace & Microsoft Office Suite",
-      "CRM software (HubSpot, Zoho)",
-      "Workflow automation (Google appscript)",
-      "Task & project management tools (Asana, Trello, Notion)",
-      "Communication tools (Slack, Zoom, Microsoft Teams)",
-      " Canva, Speechlo, and Doodly ",
-      "AI tools such as ChatGPT, Harpa AI, Runway ML, Julius,AI, otterAI"
-    ];
-  
-    return (
-      <section id="services" className=" py-16 text-center pt-10">
-        <div className="max-w-6xl mx-auto px-6 pt-20">
-  
-          <h2 className="text-4xl font-bold  text-yellow-400">My Services</h2>
-          <p className="text-lg text-gray-400 mt-4">Here’s how I can help you</p>
-
-
-          <div className="grid sm:grid-cols-2 md:grid-cols-2 gap-8 mt-8 pt-10">
-            {services.map((service, index) => (
-              <div key={index} className="bg-[#FFFFFF1A] p-6 rounded-lg shadow-md text-left hover:scale-90 transition-transform duration-300">
-                <h3 className="text-2xl font-semibold text-white mb-3">{service.icon} {service.category}</h3>
-                <ul className="list-none space-y-2 text-neutral-800">
-                  {service.items.map((item, idx) => (
-                    <li key={idx} className="flex items-center">
-                      <span className="text-yellow-400 mr-2"><GrStatusGood size='20' /></span> <span className="text-[#999999]">{item}</span>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            ))}
-          </div>
-  
-         
-          <h2 className="text-4xl font-bold text-yellow-400  mt-16">Technical & Digital Tools</h2>
-          <p className="text-lg text-gray-400 mt-4">Some of the tools I use</p>
-  
-          <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-6 mt-8 pt-10">
-            {tools.map((tool, index) => (
-              <div key={index} className="bg-[#FFFFFF1A] p-4 rounded-lg shadow-md text-yellow-400 font-semibold hover:scale-105 transition-transform duration-300 ">
-               <span className="text-yellow-400"> ✔  </span><span className="text-[#999999]">{tool}</span>
-              </div>
-            ))}
-          </div>
+  return (
+    <section id="services" className="py-20 lg:py-28">
+      <div className="max-w-6xl mx-auto px-6">
+        {/* Section Header */}
+        <div className="text-center mb-16">
+          <span className="text-yellow-400 text-sm font-semibold tracking-widest uppercase">What I Offer</span>
+          <h2 className="text-4xl md:text-5xl font-bold text-white mt-4">How I Help Organizations Succeed</h2>
+          <p className="text-gray-400 mt-4 max-w-2xl mx-auto text-lg">
+            Strategic solutions tailored to drive growth, efficiency, and lasting impact for your organization.
+          </p>
         </div>
-        
-      </section>
-    );
-  }
-  
+
+        {/* Services Grid */}
+        <div className="grid md:grid-cols-2 gap-8">
+          {services.map((service, index) => (
+            <div
+              key={index}
+              className="group bg-gradient-to-br from-gray-900/80 to-gray-800/50 p-8 rounded-2xl border border-gray-700/50 hover:border-yellow-400/50 transition-all duration-500 hover:transform hover:-translate-y-2"
+            >
+              {/* Service Header */}
+              <div className="flex items-start gap-4 mb-6">
+                <div className="w-14 h-14 bg-yellow-400/10 rounded-xl flex items-center justify-center group-hover:bg-yellow-400/20 transition-colors duration-300">
+                  <service.icon className="text-yellow-400 text-2xl" />
+                </div>
+                <div className="flex-1">
+                  <h3 className="text-xl font-bold text-white mb-2">{service.category}</h3>
+                  <p className="text-gray-400 text-sm">{service.description}</p>
+                </div>
+              </div>
+
+              {/* Service Items */}
+              <ul className="space-y-3">
+                {service.items.map((item, idx) => (
+                  <li key={idx} className="flex items-start gap-3">
+                    <span className="text-yellow-400 mt-1 flex-shrink-0">
+                      <GrStatusGood size={18} />
+                    </span>
+                    <span className="text-gray-300">{item}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}

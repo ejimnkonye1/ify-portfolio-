@@ -29,7 +29,7 @@
     "tailwindcss-animated": "^2.0.0"
   },
   "devDependencies": {
-    "@remix-run/dev": "^2.15.3",
+    "@remix-run/dev": "^2.17.4",
     "@types/nodemailer": "^6.4.17",
     "@types/react": "^18.2.20",
     "@types/react-dom": "^18.2.7",

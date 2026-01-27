@@ -15,7 +15,9 @@ import About from "./components/about";
 import Services from "./components/services";
 import Skills from './components/skills'
 import Reviews from './components/review'
+import Insights from './components/insights'
 import Contact from './components/contact'
+import Footer from './components/footer'
 import { useEffect, useState } from "react";
 
 export const links: LinksFunction = () => [
@@ -61,8 +63,10 @@ export function Layout({ children }: { children: React.ReactNode }) {
        
    
         <Skills/>
+        <Insights/>
         <Reviews/>
         <Contact/>
+        <Footer/>
         </div>
        
         {loading && <Loader />}
