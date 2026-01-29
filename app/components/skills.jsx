@@ -14,14 +14,15 @@ export default function Skills() {
     "Digital Transformation",
   ];
 
+
   const tools = [
     {
       category: "Project & Workflow Management",
-      items: ["Asana", "Trello", "Notion"],
+      items: ["Asana", "Trello", "Notion", "Jira", "Linear", "Clickup", "Smartsheet"],
     },
     {
       category: "CRM & Customer Experience",
-      items: ["HubSpot", "Zoho"],
+      items: ["HubSpot", "Zoho", "Go-highlevel", "Zendesk", "Miro", "Google Form", "Freshdesk"],
     },
     {
       category: "Automation & Productivity",
@@ -29,7 +30,7 @@ export default function Skills() {
     },
     {
       category: "Communication & Collaboration",
-      items: ["Slack", "Zoom", "Microsoft Teams"],
+      items: ["Slack", "Zoom", "Microsoft Teams", "Google Meet", "Discord"],
     },
     {
       category: "Data Analysis & Visualization",

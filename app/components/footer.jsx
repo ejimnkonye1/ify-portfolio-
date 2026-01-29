@@ -16,7 +16,7 @@ export default function Footer() {
   ];
 
   return (
-    <footer className="bg-gradient-to-b from-gray-900/80 to-black border-t border-gray-800">
+    <footer id="footer" className="bg-gradient-to-b from-gray-900/80 to-black border-t border-gray-800">
       <div className="max-w-6xl mx-auto px-6 py-16">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">
           {/* Brand Column */}
@@ -45,7 +45,7 @@ export default function Footer() {
                 <AiOutlineMail className="text-gray-300 group-hover:text-black text-xl" />
               </a>
               <a
-                href="https://medium.com/@ifebuche-juliet"
+                href="https://medium.com/@ifebuchejulietobi"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-11 h-11 bg-gray-800 hover:bg-yellow-400 rounded-lg flex items-center justify-center transition-all duration-300 group"
@@ -80,7 +80,7 @@ export default function Footer() {
                 Ready to transform your projects?
               </p>
               <a
-                href="https://calendly.com/ifebuchesolution/15min"
+                href="https://calendly.com/ifebuchesolution/meeting-with-ifebuche"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-block bg-yellow-400 hover:bg-yellow-500 text-black px-6 py-3 rounded-lg font-semibold transition-all duration-300 text-base"

@@ -49,7 +49,7 @@ export default function Contact() {
       icon: AiOutlineCalendar,
       title: "Book a Consultation",
       description: "Schedule a free 15-minute call",
-      link: "https://calendly.com/ifebuchesolution/15min",
+      link: "https://calendly.com/ifebuchesolution/meeting-with-ifebuche ",
       linkText: "Book Now",
     },
     {

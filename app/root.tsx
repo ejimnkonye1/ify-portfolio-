@@ -33,17 +33,22 @@ export const links: LinksFunction = () => [
   },
   {
     rel: "stylesheet",
-    href: "https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css", // Add Animate.css here
+    href: "https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css",
   },
 ];
 
-
-
 export function Layout({ children }: { children: React.ReactNode }) {
   const [loading, setLoading] = useState(true);
+
   useEffect(() => {
-    setTimeout(() => setLoading(false), 2000); // Simulating a loading delay
+    // Simulate loading delay
+    const timer = setTimeout(() => {
+      setLoading(false);
+    }, 2000);
+
+    return () => clearTimeout(timer);
   }, []);
+
   return (
     <html lang="en">
       <head>
@@ -51,26 +56,36 @@ export function Layout({ children }: { children: React.ReactNode }) {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <Meta />
         <Links />
-        
       </head>
       <body className="font-poppins">
-        <Navbar />
-        <Hero />
-        
-        <div >
-        <About />
-        <Services />
-       
-   
-        <Skills/>
-        <Insights/>
-        <Reviews/>
-        <Contact/>
-        <Footer/>
-        </div>
-       
-        {loading && <Loader />}
-      {!loading && <>{children}</>}
+        {/* Show loader OR content, not both */}
+        {loading ? (
+          <Loader />
+        ) : (
+          <>
+            <Navbar />
+            <main id="main-content">
+              <Hero />
+              <div id="about">
+                <About />
+              </div>
+              <div id="services">
+                <Services />
+              </div>
+              <div id="skills">
+                <Skills />
+              </div>
+              <div id="insights">
+                <Insights />
+              </div>
+              <div id="contact">
+                <Contact />
+              </div>
+              <Footer />
+            </main>
+            {children}
+          </>
+        )}
         <ScrollRestoration />
         <Scripts />
       </body>

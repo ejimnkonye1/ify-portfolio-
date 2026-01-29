@@ -68,7 +68,8 @@ export default function Insights() {
         {/* View All Link */}
         <div className="text-center mt-12">
           <a
-            href="https://medium.com/@ifebuche-juliet"
+            href="
+https://medium.com/@ifebuchejulietobi"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 text-gray-400 hover:text-yellow-400 font-medium transition-colors"

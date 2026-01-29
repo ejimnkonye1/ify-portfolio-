@@ -21,16 +21,16 @@ const Hero = () => {
             </p>
 
             <p className="text-gray-400 text-lg mb-8 max-w-xl mx-auto lg:mx-0">
-              I help businesses align strategy, operations, and teams — turning complex challenges into successful outcomes.
+              I help businesses align strategy, operations, and teams turning complex challenges into successful outcomes.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-              <a href="https://calendly.com/ifebuchesolution/15min" target="_blank" rel="noopener noreferrer">
+              <a href="https://calendly.com/ifebuchesolution/meeting-with-ifebuche" target="_blank" rel="noopener noreferrer">
                 <button className="w-full sm:w-auto bg-yellow-400 hover:bg-yellow-500 text-black px-8 py-4 rounded-full font-bold transition-all duration-300 transform hover:scale-105 shadow-lg shadow-yellow-400/25">
                   Book a Call
                 </button>
               </a>
-              <a href="#services">
+              <a href="https://forms.gle/A6paaJTMatAE3nmt8" target="_blank" rel="noopener noreferrer">
                 <button className="w-full sm:w-auto border-2 border-white hover:border-yellow-400 hover:text-yellow-400 px-8 py-4 rounded-full font-bold transition-all duration-300">
                   Explore My Work
                 </button>
@@ -40,11 +40,11 @@ const Hero = () => {
             {/* Stats */}
             <div className="grid grid-cols-3 gap-6 mt-12 pt-8 border-t border-gray-800">
               <div className="text-center lg:text-left">
-                <p className="text-3xl font-bold text-yellow-400">4+</p>
+                <p className="text-3xl font-bold text-yellow-400">5+</p>
                 <p className="text-gray-400 text-sm">Years Experience</p>
               </div>
               <div className="text-center lg:text-left">
-                <p className="text-3xl font-bold text-yellow-400">50+</p>
+                <p className="text-3xl font-bold text-yellow-400">25+</p>
                 <p className="text-gray-400 text-sm">Projects Delivered</p>
               </div>
               <div className="text-center lg:text-left">

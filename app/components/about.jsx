@@ -1,3 +1,4 @@
+import { Link } from '@remix-run/react';
 import 'animate.css';
 import { FiTarget, FiUsers, FiTrendingUp, FiMic } from 'react-icons/fi';
 
@@ -57,16 +58,16 @@ export default function About() {
 
             {/* CTA Buttons */}
             <div className="flex flex-col sm:flex-row gap-4">
-              <a href="https://calendly.com/ifebuchesolution/15min" target="_blank" rel="noopener noreferrer" className="flex-1">
+              <a href="https://calendly.com/ifebuchesolution/meeting-with-ifebuche" target="_blank" rel="noopener noreferrer" className="flex-1">
                 <button className="w-full bg-yellow-400 hover:bg-yellow-500 text-black px-6 py-4 rounded-xl font-semibold transition-all duration-300 transform hover:scale-105">
                   Book a Consultation
                 </button>
               </a>
-              <a href="#contact" className="flex-1">
+              <Link href="#footer" className="flex-1">
                 <button className="w-full border-2 border-gray-600 hover:border-yellow-400 text-white px-6 py-4 rounded-xl font-semibold transition-all duration-300">
                   Get in Touch
                 </button>
-              </a>
+              </Link>
             </div>
           </div>
         </div>
